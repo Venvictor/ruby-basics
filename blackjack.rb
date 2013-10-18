@@ -16,7 +16,30 @@
 # 2 A
 
 
-
+def hand
+    cards = [["A", 11],["K", 10],["Q", 10],["J", 10],["10", 10],["9", 9],["8",8],["7",7],["6",6],["5",5],["4",4],["3",3],["2",2]]
+    
+    numar = (1..14)
+    def cdarrayish(numar)
+        numar.each { |element| element.to_s }
+    end
+    # cdarrayish(numar) { |element| a.push(element)}
+    a = []
+    cdarrayish(numar).each { |element| a.push("Hearts-" + element.to_s) }
+    cdarrayish(numar).each { |element| a.push("Spades-" + element.to_s) }
+    cdarrayish(numar).each { |element| a.push("Diamonds-" + element.to_s) }
+    cdarrayish(numar).each { |element| a.push("Cloves-" + element.to_s) }
+    
+    while 'shuffle'
+        f =  rand(max = 56)
+        g =  rand(max = 56)
+        if f != g
+            break
+        end
+    end
+    puts a[f] + " " + a[g]
+end
+puts hand
 
 
 # 2. Enhance #1 by showing the total score.
